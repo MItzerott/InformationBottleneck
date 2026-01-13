@@ -1,0 +1,37 @@
+# This is the configuration file with some standard settings.
+
+[sim_params]
+sim_size =          1000#22#32#64
+sim_identifier =    0
+load_all =          1#0#1#0#1
+
+[ib_fit_params]
+# default initial parameters for ib fitting
+betas =             []
+beta_search =       0
+max_fits =          1000
+max_time =          604800 # 1 week
+repeats =           1
+geoapprox =         0
+clamp =             0
+using_labels =      0
+beta_start =        0#-1#0.2016338611696504
+beta_end =          5#3.4#0.2630344058337938
+beta_steps =        1#35
+p0 =                0.0
+waviness =          0.0
+reverse_sweep =     0 #1 means, that the code runs from high beta to low, while 0 is the other way
+perturbation =      0.2#1e-12
+init_random =       1
+Tmax =              1000
+
+[ib_model_params]
+#parameters for the model
+total_bins_1D =     10#55#25#110
+
+[ib_code_params]
+max_n_cpus =        72
+quiet =             1
+print_func_names =  0
+data_type =         32 #32 either float32 or float64
+benchmark_mode =    0 #0: False, 1 True: only 1 step per beta where KL is calculated for a number of cores
